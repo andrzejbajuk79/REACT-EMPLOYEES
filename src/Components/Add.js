@@ -2,6 +2,7 @@
  * Created by abajuk on 14.06.2017.
  */
 import React, { Component } from 'react';
+import uuid from 'uuid';
 
 
 
@@ -26,6 +27,7 @@ class AddProject extends Component {
         } else {
 
             this.setState({ newPerson : {
+                id :uuid.v4(),
                 name: this.refs.name.value,
                  secondName : this.refs.secondName.value,
                 job: this.refs.job.value
@@ -60,7 +62,7 @@ class AddProject extends Component {
                   </select>
               </div>
               <br/>
-              <input type="submit" value="Submit"/>
+              <input type="submit" value="DODAJ"/>
 
           </form>
       </div>

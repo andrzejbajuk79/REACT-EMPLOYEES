@@ -7,3 +7,6 @@ li { margin-top: 10px;}
     margin: 0 auto;
     text-decoration: none;
 }
+a:-webkit-any-link {
+    text-decoration: none;
+}
