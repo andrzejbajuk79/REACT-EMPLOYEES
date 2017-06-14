@@ -1,0 +1,9 @@
+body {
+    background: lightblue;
+    padding: 40px;
+}
+li { margin-top: 10px;}
+.Projects {
+    margin: 0 auto;
+    text-decoration: none;
+}
