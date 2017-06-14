@@ -16,7 +16,7 @@ if(this.props.projects){
   //console.log(this.props);
     return (
       <div className="Projects">
-        <h1> Lista Pracownikow</h1>
+        <h2> Lista Pracownikow</h2>
       {projectItems}
       </div>
     );
