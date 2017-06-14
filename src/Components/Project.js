@@ -11,7 +11,7 @@ class Projects extends Component {
     if(this.props.projects){
         projectItems = this.props.projects.map(project => {
             return (
-                <ProjectItem onDelete={this.deletePerson.bind(this)}  key= {project.name} project = {project} />
+                <ProjectItem onDelete={this.deletePerson.bind(this)}  key= {project.secondName}  project = {project} />
             );
         });
     }
@@ -23,6 +23,10 @@ class Projects extends Component {
       </div>
     );
   }
+}
+Projects.propTypes = {
+    projects: React.PropTypes.array,
+    onDelete: React.PropTypes.func
 }
 
 export default Projects;

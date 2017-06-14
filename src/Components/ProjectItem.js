@@ -6,7 +6,7 @@ import React, { Component } from 'react';
 
 class ProjectItem extends Component {
  deletePerson(id){
-     console.log('test');
+     //console.log('test');
      this.props.onDelete(id)
  }
   render() {
@@ -19,6 +19,10 @@ class ProjectItem extends Component {
       </li>
     );
   }
+}
+ProjectItem.propTypes = {
+    project: React.PropTypes.object,
+    onDelete: React.PropTypes.func
 }
 
 export default ProjectItem;

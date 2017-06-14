@@ -70,6 +70,10 @@ class AddProject extends Component {
   }
 }
 
+AddProject.propTypes = {
+    job: React.PropTypes.array,
+    addPerson: React.PropTypes.func
+}
 export default AddProject;
 /**
  * Created by abajuk on 14.06.2017.
