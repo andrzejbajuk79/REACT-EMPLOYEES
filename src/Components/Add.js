@@ -30,7 +30,10 @@ class AddProject extends Component {
 
             }}, function(){
             console.log(this.state);
+            this.refs.secondName.value = '';
+            this.refs.name.value = '';
             this.props.addPerson(this.state.newPerson);
+
             });
         }
         e.preventDefault();
