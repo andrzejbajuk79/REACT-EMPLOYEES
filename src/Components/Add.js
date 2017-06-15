@@ -4,8 +4,6 @@
 import React, { Component } from 'react';
 import uuid from 'uuid';
 
-
-
 class AddProject extends Component {
     constructor(){
         super();
@@ -14,9 +12,8 @@ class AddProject extends Component {
         }
     }
 
-
     static defaultProps = {
-        job : ['programista','Sprzataczka','kierownik','Kierowca']
+        job : ['programista','Sprzataczka','kierownik','Kierowca','Inne']
     };
 
     handleSubmit(e){
@@ -25,7 +22,6 @@ class AddProject extends Component {
 
             alert('Uzupelnic pola');
         } else {
-
             this.setState({ newPerson : {
                 id :uuid.v4(),
                 name: this.refs.name.value,
@@ -41,9 +37,7 @@ class AddProject extends Component {
     }
 
  render() {
-     let jobOptions = this.props.job.map(job => {
-      return <option key={job} value= {job}>{job}</option>
- });
+     let jobOptions = this.props.job.map(job => {return <option key={job} value={job}>{job}</option>});
     return (
       <div>
           <form onSubmit = { this.handleSubmit.bind(this)}>
@@ -56,21 +50,17 @@ class AddProject extends Component {
                   <input type="text" ref='secondName' />
                </div>
               <div>
-                  <label>job</label><br/>
-                  <select ref='job'>
-                     {jobOptions}
-                  </select>
+                  <label>Stanowisko</label><br/>
+                  <select ref='job'>{jobOptions}</select>
               </div>
               <br/>
               <input type="submit" value="DODAJ"/>
-
           </form>
       </div>
     );
   }
 }
 
-/
 export default AddProject;
 /**
  * Created by abajuk on 14.06.2017.
